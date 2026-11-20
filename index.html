@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="《軒轅劍參外傳 天之痕》的符鬼小屋，使用原版美術素材的網頁復刻。">
+<title>符鬼小屋</title>
+<link rel="stylesheet" href="./room.css?v=2">
+<script src="./room.js?v=3" defer></script>
+</head>
+<body>
+<main class="shell" aria-label="符鬼小屋">
+  <div id="window">
+    <img id="room" class="room" src="./art/114.png" alt="" draggable="false">
+    <button id="hide" class="chrome hide" type="button" aria-label="隱藏小屋"></button>
+    <button id="close" class="chrome close" type="button" aria-label="結束培養"></button>
+    <section id="picker" class="picker" aria-labelledby="pick-title">
+      <h1 id="pick-title">符鬼小屋</h1>
+      <p>選擇符鬼</p>
+      <div id="pets" class="pets"></div>
+    </section>
+    <section id="cottage" aria-label="照料符鬼" hidden>
+      <div id="status-line" class="status" aria-live="polite">
+        <img id="need-icon" src="./art/138.png" alt="">
+        <span id="need"></span>
+      </div>
+      <span id="clock"></span>
+      <img id="mood" src="./art/138.png" alt="心情平靜">
+      <div id="garden" aria-label="小屋內景">
+        <img id="pet" alt="" draggable="false">
+        <div id="spots" hidden></div>
+      </div>
+      <p id="progress" class="progress" aria-live="polite"></p>
+      <nav id="commands" aria-label="照料指令"></nav>
+      <button id="pot" type="button" aria-label="系統選單" title="系統選單"></button>
+    </section>
+    <section id="system" aria-label="系統選單" hidden>
+      <button type="button" class="system-choice quit" data-system="quit" aria-label="離開"></button>
+      <button type="button" class="system-choice end" data-system="end" aria-label="結束培養"></button>
+      <button type="button" class="system-choice sound" data-system="sound" aria-label="音效" aria-pressed="true"><img id="sound-indicator" src="./art/157.png" alt=""></button>
+      <button type="button" class="system-choice conceal" data-system="hide" aria-label="隱藏畫面"></button>
+      <button type="button" class="system-choice load" data-system="load" aria-label="讀取"></button>
+      <button type="button" class="system-choice save" data-system="save" aria-label="存檔"></button>
+      <button type="button" class="system-return" data-system="return" aria-label="返回小屋"></button>
+    </section>
+  </div>
+  <button id="reopen" type="button" hidden>開啟符鬼小屋</button>
+  <p id="notice" role="status"></p>
+</main>
+</body>
+</html>
